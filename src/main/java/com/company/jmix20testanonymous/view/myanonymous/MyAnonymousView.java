@@ -6,6 +6,7 @@ import com.company.jmix20testanonymous.view.main.MainView;
 
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import io.jmix.flowui.UiProperties;
 import io.jmix.flowui.ViewNavigators;
 import io.jmix.flowui.Views;
@@ -14,6 +15,7 @@ import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Route(value = "anonymous", layout = MainView.class)
+@AnonymousAllowed
 @ViewController("MyAnonymousView")
 @ViewDescriptor("my-anonymous-view.xml")
 public class MyAnonymousView extends StandardView {
